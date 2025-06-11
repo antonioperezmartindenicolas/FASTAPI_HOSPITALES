@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Detalles del hospital{% endblock %}
+
+{% block content %}
+<h1>Detalles de la Reserva</h1>
+<p><strong>Nombre:</strong> {{ hospital.nombre }}</p>
+<p><strong>Número de pacientes:</strong> {{ hospital.numero_pacientes }}</p>
+<a href="{{ request.url_for('edithospital', hospital_id=hospital.id) }}">Editar</a>
+{% endblock %}

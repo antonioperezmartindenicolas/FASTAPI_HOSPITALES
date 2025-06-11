@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - Hospital{% endblock %}
+
+{% block content %}
+<h2>Buscar hospital a editar por ID</h2>
+
+{% if mensaje %}
+    <div class="alert">{{ mensaje }}</div>
+{% endif %}
+
+<form id="editForm" method="get">
+    <label for="hospital_id">Hospitales:</label>
+    <select id="hospital_id" name="hospital_id" required>
+        {% for hospital in hospitales %}
+        <option value="{{ hospital.id }}">{{ hospital.id }} - nombre: {{ hospital.nombre }} - pacientes: {{ hospital.numero_pacientes }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Editar</button>
+</form>
+
+<script>
+document.getElementById('editForm').onsubmit = function(e) {
+    e.preventDefault();
+    var id = document.getElementById('hospital_id').value;
+    window.location.href = "{{ request.url_for('edithospital', hospital_id='HOSPITAL_ID') }}".replace('HOSPITAL_ID', id);
+};
+</script>
+{% endblock %}

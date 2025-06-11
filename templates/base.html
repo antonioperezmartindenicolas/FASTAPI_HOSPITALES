@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hospital{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                <li><a href="{{ url_for('formaddhospital') }}">Añadir Hospital</a></li>
+                <li><a href="{{ url_for('hospitales') }}">Hospitales</a></li>
+                <li><a href="{{ url_for('edithospitales') }}">Editar Hospitales</a></li>
+                <li><a href="{{ url_for('borrarhospitales') }}">borrar Hospitales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; antonio </p>
+    </footer>
+</body>
+</html>

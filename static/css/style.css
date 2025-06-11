@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+    color: #222;
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+header {
+    background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 22px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+    background: rgba(255,255,255,0.08);
+}
+
+header ul li a:hover {
+    background: #fff;
+    color: #ee0979;
+}
+
+main {
+    padding: 45px;
+    margin: 0 auto;
+    max-width: 1050px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(67,198,172,0.10);
+}
+
+h1, h2 {
+    margin-bottom: 22px;
+    color: #ee0979;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+h2 {
+    color: #ff6a00;
+    font-size: 1.7em;
+}
+
+footer {
+    background: linear-gradient(90deg, #43c6ac 0%, #191654 100%);
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.10);
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+}
+
+form input, form textarea, form select {
+    margin-bottom: 17px;
+    padding: 14px;
+    border: 1.5px solid #ee0979;
+    border-radius: 7px;
+    font-size: 1.1em;
+    background: #fffbe7;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #43c6ac;
+    background: #e0f7fa;
+}
+
+form button {
+    padding: 14px;
+    background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #43c6ac 0%, #191654 100%);
+}
+
+.alert {
+    padding: 14px;
+    background: #ffe0e9;
+    color: #ee0979;
+    border: 1.5px solid #ee0979;
+    border-radius: 7px;
+    margin-bottom: 22px;
+    font-weight: bold;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 32px;
+    padding: 45px 0;
+}
+
+.menu-item {
+    background: linear-gradient(135deg, #fffbe7 0%, #f8ffae 100%);
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(255,106,0,0.08);
+    padding: 22px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-7px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(238,9,121,0.15);
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    color: #ff6a00;
+    margin: 15px 0;
+}
+
+.menu-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.menu-item p:last-of-type {
+    font-weight: bold;
+    color: #43c6ac;
+}
+
+.menu-item .cta-button {
+    padding: 11px 22px;
+    background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    display: inline-block;
+    margin-top: 12px;
+    transition: background 0.3s;
+}
+
+.menu-item .cta-button:hover {
+    background: linear-gradient(90deg, #43c6ac 0%, #191654 100%);
+}

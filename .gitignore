@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+
+# Entornos virtuales
+env/
+venv/
+ENV/
+.venv/
+
+# VS Code
+.vscode/
+
+# Archivos de entorno
+.env
+*.env
+
+# Archivos de bases de datos temporales
+*.db
+
+# Otros
+.DS_Store
+Thumbs.db
